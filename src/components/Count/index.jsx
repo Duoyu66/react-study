@@ -19,9 +19,10 @@ class Count extends Component {
         store.dispatch({type:'decrement',data:value*1})
     }
     icrementIfOdd=()=>{
+
         const {value} = this.selectNumber
-        const {count} = store.getState()
-       if (count % 2!==0){
+        const count= store.getState()
+       if (count % 2   !==0){
            store.dispatch({type:'increment',data:value*1})
        }
     }
